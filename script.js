@@ -16,10 +16,10 @@ if (countriesArray.length === 0) {
 } else {
     let contriesList = ''
     countriesArray[0].forEach(country => {
-      const eachCountry = `<li class="countryCard">
+      const eachCountry = `<li class="countryCard ${country.region}">
         <div class="countryCard__inner">
           <div class="countryCard__front">
-            <img src="${country.flags.svg}" alt="${country.name}"
+            <img class="countryCard__flags" src="${country.flags.svg}" alt="${country.name}"/>
           </div>        
           <div class="countryCard__back">
             <h3>${country.name}</h3>
@@ -30,7 +30,7 @@ if (countriesArray.length === 0) {
 
           </div>        
         </div>
-      </li>`
+      </li>`;
 
 
       contriesList += eachCountry
